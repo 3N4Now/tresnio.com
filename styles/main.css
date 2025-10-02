@@ -1,0 +1,109 @@
+/* styles/main.css
+   Estilos globales para Tresnio — moderno, accesible y responsive
+   Variables CSS para theming y fácil modificación.
+*/
+
+:root{
+  --bg: #071028;
+  --panel: #0f1724;
+  --muted: #9aa6b2;
+  --accent: #7c3aed;
+  --text: #e6eef6;
+  --surface: rgba(255,255,255,0.02);
+  --radius: 12px;
+  --container-width: 1120px;
+  --max-width: 1200px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color-scheme: dark;
+}
+
+/* reset básico */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+  font-size:16px;
+}
+
+/* contenedor central */
+.container{
+  width:90%;
+  max-width:var(--container-width);
+  margin:0 auto;
+  padding:28px 0;
+}
+
+/* enlace para salto (accesibilidad) */
+.skip-link{
+  position:absolute;
+  left:-999px;
+  top:auto;
+  width:1px;height:1px;overflow:hidden;
+}
+.skip-link:focus{
+  left:1rem;top:1rem;width:auto;height:auto;padding:8px 12px;background:#fff;color:#000;border-radius:6px;z-index:9999;
+}
+
+/* HEADER */
+.site-header{
+  border-bottom:1px solid rgba(255,255,255,0.03);
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+  position:sticky;
+  top:0;
+  z-index:900;
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand-title{font-family:"Playfair Display",serif;font-size:22px;margin:0;color:var(--text)}
+.brand-tag{margin:0;color:var(--muted);font-size:12px}
+
+/* NAV */
+.site-nav .nav-list{list-style:none;margin:0;padding:0;display:flex;gap:20px;align-items:center}
+.site-nav a{color:var(--muted);text-decoration:none;font-weight:500;padding:8px;border-radius:8px}
+.site-nav a:hover, .site-nav a:focus{color:var(--text);background:rgba(255,255,255,0.02)}
+
+/* HERO */
+.hero{padding:36px 0}
+.hero-grid{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:start}
+.hero-left .lead{color:var(--muted);margin-top:8px}
+.card{border-radius:var(--radius);padding:18px;border:1px solid var(--surface);background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent)}
+.card-exo h3{margin:0 0 6px 0}
+.cta{display:inline-block;margin-top:12px;padding:10px 16px;border-radius:10px;border:2px solid var(--accent);cursor:pointer;color:var(--text)}
+
+/* DUAL COLUMNS */
+.dual-columns{display:grid;grid-template-columns:1fr 420px;gap:28px;padding:28px 0}
+.card-grid{display:flex;gap:16px;flex-wrap:wrap;margin-top:12px}
+.mini-card{width:150px;padding:12px;border-radius:8px;border:1px solid var(--surface);background:transparent}
+
+/* PROJECTS */
+.project-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:18px 0}
+.project-tile{padding:18px;border-radius:10px;border:1px solid var(--surface)}
+
+/* BLOG */
+.blog{display:grid;grid-template-columns:1fr 320px;gap:20px;padding:28px 0}
+.post{padding:14px;border:1px solid var(--surface);border-radius:8px;margin-bottom:12px}
+
+/* FOOTER */
+.site-footer{border-top:1px solid rgba(255,255,255,0.03);padding:18px 0;margin-top:28px}
+.footer-inner{display:flex;justify-content:space-between;align-items:center}
+.footer-inner a{color:var(--muted);text-decoration:none}
+
+/* Helpers */
+.muted{color:var(--muted)}
+.small{font-size:13px;color:var(--muted)}
+.icon{display:inline-block;width:28px;height:28px;border-radius:6px;border:1px solid var(--surface);margin-left:8px}
+
+/* responsive */
+@media (max-width:980px){
+  .hero-grid, .dual-columns, .blog{grid-template-columns:1fr}
+  .project-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:560px){
+  .project-grid{grid-template-columns:1fr}
+  .site-nav .nav-list{gap:10px;flex-wrap:wrap}
+  .brand-title{font-size:18px}
+}
