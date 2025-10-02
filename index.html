@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tresnio — laboratorio público & archivo simbólico</title>
+  <meta name="description" content="Tresnio: laboratorio híbrido de proyectos técnicos, cosmogonía y archivo simbólico. Portafolio, textos y experimentos." />
+  <link rel="canonical" href="https://tresnio.com/">
+
+  <!-- fonts (preconnect) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- styles -->
+  <link rel="stylesheet" href="styles/main.css">
+
+  <!-- JSON-LD básico para SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Tresnio",
+    "url": "https://tresnio.com/",
+    "description": "Laboratorio público y archivo simbólico — proyectos técnicos y cosmogonía."
+  }
+  </script>
+</head>
+<body class="tresnio-root" data-tresnio-component="root" data-theme="dark" data-tresnio-auto-init="true">
+
+  <a class="skip-link" href="#main-content">Saltar al contenido</a>
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner" aria-label="Encabezado principal" data-tresnio-component="header">
+    <div class="container header-inner">
+      <div class="brand" aria-hidden="false">
+        <h1 class="brand-title">TRESNIO</h1>
+        <p class="brand-tag">laboratorio de idea · marca · cosmogonía</p>
+      </div>
+
+      <nav class="site-nav" role="navigation" aria-label="Navegación principal" data-tresnio-component="nav">
+        <ul class="nav-list" role="menubar" aria-label="menu principal">
+          <li role="none"><a role="menuitem" href="#inicio" data-route>#Inicio</a></li>
+          <li role="none"><a role="menuitem" href="#sobre" data-route>#Sobre</a></li>
+          <li role="none"><a role="menuitem" href="#proyectos" data-route>#Proyectos</a></li>
+          <li role="none"><a role="menuitem" href="#laboratorio" data-route>#Laboratorio</a></li>
+          <li role="none"><a role="menuitem" href="#contacto" data-route>#Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main id="main-content" class="site-main" role="main" aria-label="Contenido principal">
+    <!-- HERO: colocar <tres-hero> aquí; el componente se definirá en scripts/components/hero.js -->
+    <section id="inicio" class="hero container" data-tresnio-component="hero" aria-label="Hero principal">
+      <div class="hero-grid">
+        <div class="hero-left">
+          <h2>Tresnio — entre lo claro y lo profundo</h2>
+          <p class="lead">Un espacio híbrido: proyectos técnicos, laboratorio simbólico y escritura filosófica.</p>
+          <article class="card card-exo" data-tresnio-component="card" data-card-type="exoterico" aria-label="Visión exótera">
+            <h3>Visión Exóterica</h3>
+            <p>Portafolio, experimentos de software, microempresas y documentación pública.</p>
+            <button class="cta" data-action="explorar-proyectos" type="button">Explorar proyectos</button>
+          </article>
+        </div>
+
+        <aside class="hero-right" data-slot="esoterico" aria-labelledby="hero-eso-title">
+          <h3 id="hero-eso-title">Visión Esotérica</h3>
+          <p class="muted">Cosmogonía, símbolos, narrativas íntimas, el 'ethos' de Tresnio.</p>
+          <!-- Aquí se podrá montar el símbolo/mandala por componente o imagen desde assets/ -->
+          <div class="card" role="img" aria-label="Símbolo Tresnio (placeholder)">
+            <p class="small">[Símbolo / mandala — se cargará como componente o imagen en assets/]</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- DUAL -->
+    <section id="laboratorio" class="dual-columns container" aria-label="Secciones exótero y esotérico" data-tresnio-component="dual">
+      <div class="col exo" aria-labelledby="exo-title">
+        <h3 id="exo-title">Exótero — Laboratorio Público</h3>
+        <p class="muted">Documentos técnicos, tutoriales, procesos: lo compartible y reproducible.</p>
+        <div class="card-grid" aria-hidden="false">
+          <article class="mini-card" data-item="proyecto-a"><h4>Proyecto A</h4><p>Resumen breve.</p></article>
+          <article class="mini-card" data-item="proyecto-b"><h4>Proyecto B</h4><p>Resumen breve.</p></article>
+          <article class="mini-card" data-item="proyecto-c"><h4>Proyecto C</h4><p>Resumen breve.</p></article>
+        </div>
+      </div>
+
+      <aside class="col eso" aria-labelledby="eso-title">
+        <h3 id="eso-title">Esotérico — Archivo Simbólico</h3>
+        <p class="muted">Textos, meditaciones, mapas simbólicos y registros de ritual creativo.</p>
+        <ul class="list-archive">
+          <li data-item="mapa-cosmogonico"><strong>Mapa Cosmogónico</strong> — índice</li>
+          <li data-item="escrituras-sapiensivas"><strong>Escrituras Sapiensivas</strong> — colección</li>
+        </ul>
+      </aside>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="projects container" aria-label="Proyectos destacados" data-tresnio-component="projects">
+      <header><h3>Proyectos destacados</h3><p class="muted">Muestras rápidas: código, diseño, cervecería, textos.</p></header>
+      <div class="project-grid" role="list">
+        <article role="listitem" class="project-tile" data-project="tech"><h4>Proyecto · Tech</h4><p>Resumen breve.</p></article>
+        <article role="listitem" class="project-tile" data-project="arte"><h4>Proyecto · Arte</h4><p>Resumen breve.</p></article>
+        <article role="listitem" class="project-tile" data-project="filos"><h4>Proyecto · Filos</h4><p>Resumen breve.</p></article>
+        <article role="listitem" class="project-tile" data-project="labor"><h4>Proyecto · Labor</h4><p>Resumen breve.</p></article>
+      </div>
+    </section>
+
+    <!-- BLOG / BITÁCORA -->
+    <section id="blog" class="blog container" aria-label="Blog y bitácora">
+      <div class="blog-main">
+        <h3>Blog / Bitácora</h3>
+        <p class="muted">Entrada reciente — reflexiones, tutoriales, diario de laboratorio.</p>
+
+        <article class="post" data-post="2025-10-02-ejemplo">
+          <header><time datetime="2025-10-02">02 Oct 2025</time> — <strong>Entrada pública: título</strong></header>
+          <p>Extracto breve de la entrada pública.</p>
+        </article>
+      </div>
+
+      <aside class="blog-side" aria-label="Diario esotérico">
+        <h4>Diario Esotérico</h4>
+        <p class="muted">Notas íntimas, símbolos en proceso.</p>
+        <div class="mini-archive"><p class="small">Fragmentos, rituales, mapas.</p></div>
+      </aside>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo" aria-label="Pie de página">
+    <div class="container footer-inner">
+      <p>© Tresnio — mezcla de laboratorio público y archivo simbólico · <a href="/politica">Política de uso</a> · <a href="/contacto">Contacto</a></p>
+      <div class="social-icons" aria-hidden="true">
+        <span class="icon" data-icon="ig"></span>
+        <span class="icon" data-icon="tw"></span>
+        <span class="icon" data-icon="gh"></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Inline JSON inicial (opcional): main.js puede leer esto para hydrate rápido -->
+  <script type="application/json" data-tresnio-init>
+  {
+    "projects": [
+      { "id":"tech", "title":"Proyecto Tech", "summary":"Prototipo", "publishedAt":"2025-10-02" }
+    ],
+    "nav":[
+      {"id":"inicio","label":"Inicio","href":"#inicio"},
+      {"id":"proyectos","label":"Proyectos","href":"#proyectos"}
+    ]
+  }
+  </script>
+
+  <!-- Punto de extensión: scripts (se agregarán en /scripts/*.js) -->
+  <!-- main.js será el orquestador (type=module). No incluimos aquí otros scripts todavía. -->
+  <script type="module" src="scripts/main.js" defer></script>
+
+  <noscript>
+    <div style="padding:1rem;background:#111;color:#fff;text-align:center;">
+      Esta página funciona mejor con JavaScript habilitado.
+    </div>
+  </noscript>
+</body>
+</html>
