@@ -1,0 +1,13 @@
+{
+  "site": {
+    "title": "Tresnio",
+    "description": "Tresnio — laboratorio público y archivo simbólico. Proyectos técnicos, cosmogonía y escritura.",
+    "baseUrl": "https://tresnio.com",
+    "language": "es-ES",
+    "theme": "dark",
+    "author": "Tresnio"
+  },
+  "apiRoot": "/_data",
+  "defaultCacheTTL": 300000,
+  "version": "0.1.0"
+}
