@@ -1,0 +1,23 @@
+// /scripts/main.js
+import { Router } from "./router.js";
+import { PluginSystem } from "./plugin-system.js";
+import { ejemploPlugin } from "../plugins/ejemplo-plugin.js";
+
+export const plugins = new PluginSystem();
+
+// Cargar plugins
+plugins.use(ejemploPlugin);
+
+// Definir rutas
+const routes = [
+  { path: "/", title: "Inicio" },
+  { path: "/about", title: "Nosotros" },
+  { path: "/contact", title: "Contacto" }
+];
+
+// Iniciar router
+const router = new Router(routes);
+router.render();
+
+// Exponer para navegación manual
+window.navigateTo = (path) => router.navigate(path);
